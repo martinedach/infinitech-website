@@ -1,0 +1,41 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment folder
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.tar.gz
+
+# FastAPI-specific
+*.sqlite3
+*.db
+*.log
+
+# Docker-related files
+.dockerignore
+Dockerfile
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other potentially sensitive or unnecessary files
+.env
+*.bak
+*.tmp

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Network Support - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Infinitech offers secure and reliable network solutions, including installation, maintenance, and troubleshooting. Trusted by businesses for robust and scalable network support.">
+<meta name="keywords" content="network support, network installation, network maintenance, IT networking solutions">
+<meta property="og:title" content="Network Support - Infinitech">
+<meta property="og:description" content="Discover Infinitech's secure and efficient network solutions. From installation to troubleshooting, we deliver expert network support tailored for your needs.">
+<meta property="og:url" content="https://www.infinitech.com/services/network">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <h1 class="fw-bold">Network Support</h1>
+            <p>From installations to troubleshooting, we ensure your network is secure, scalable, and reliable. Let Infinitech handle your networking needs with expert precision.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="/static/images/network-support.svg" alt="Network Support" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- Services Offered -->
+    <h2>Our Network Solutions</h2>
+    <ul class="list-group mb-5">
+        <li class="list-group-item">Network Installation and Configuration</li>
+        <li class="list-group-item">Network Security and Firewall Setup</li>
+        <li class="list-group-item">Troubleshooting and Maintenance</li>
+        <li class="list-group-item">Cloud and VPN Network Solutions</li>
+        <li class="list-group-item">Scalable Network Upgrades</li>
+    </ul>
+
+    <!-- FAQs -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion mb-5" id="networkFAQ">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                    Can you secure my existing network?
+                </button>
+            </h2>
+            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faq1">
+                <div class="accordion-body">
+                    Yes, we specialize in enhancing network security through advanced firewalls, intrusion prevention systems, and regular audits.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                    Do you support remote networks?
+                </button>
+            </h2>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2">
+                <div class="accordion-body">
+                    Absolutely! We provide VPN and cloud-based network solutions for secure remote access and connectivity.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <h2>What Our Clients Say</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="testimonial p-4 shadow-sm">
+                <p class="mb-3">"Infinitech installed a robust network for our office, and it has been seamless ever since. Highly recommend their team!"</p>
+                <h5>- Michael T.</h5>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="testimonial p-4 shadow-sm">
+                <p class="mb-3">"Their network troubleshooting saved us from a critical outage. Very professional and knowledgeable!"</p>
+                <h5>- Lisa G.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

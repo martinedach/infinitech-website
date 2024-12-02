@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Software Development - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Infinitech offers custom software development services tailored to your business needs. From web apps to enterprise solutions, we deliver innovative software for success.">
+<meta name="keywords" content="software development, custom software, web applications, enterprise solutions, IT software services">
+<meta property="og:title" content="Software Development - Infinitech">
+<meta property="og:description" content="Custom software development solutions tailored for businesses. Discover Infinitech's expertise in creating web applications and enterprise tools.">
+<meta property="og:url" content="https://www.infinitech.com/services/software">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <h1 class="fw-bold">Software Development</h1>
+            <p>Our expert team builds custom software solutions to help your business thrive. From web apps to enterprise tools, we craft software that meets your unique requirements.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="/static/images/software-development.svg" alt="Software Development" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- Services Offered -->
+    <h2>Our Expertise</h2>
+    <ul class="list-group mb-5">
+        <li class="list-group-item">Custom Web Applications</li>
+        <li class="list-group-item">Mobile App Development</li>
+        <li class="list-group-item">Enterprise Software Solutions</li>
+        <li class="list-group-item">API Development and Integration</li>
+        <li class="list-group-item">Cloud-Based Software Solutions</li>
+    </ul>
+
+    <!-- FAQs -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion mb-5" id="softwareFAQ">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                    What industries do you develop software for?
+                </button>
+            </h2>
+            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faq1">
+                <div class="accordion-body">
+                    We develop software for a wide range of industries, including healthcare, retail, finance, and education.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                    Can you integrate with our existing systems?
+                </button>
+            </h2>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2">
+                <div class="accordion-body">
+                    Yes, we specialize in creating seamless integrations with existing systems to enhance functionality and efficiency.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <h2>What Our Clients Say</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="testimonial p-4 shadow-sm">
+                <p class="mb-3">"Infinitech developed a custom web app for our business that exceeded expectations. Highly recommended!"</p>
+                <h5>- Emily R.</h5>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="testimonial p-4 shadow-sm">
+                <p class="mb-3">"Their team understood our needs perfectly and delivered software that streamlined our operations."</p>
+                <h5>- James L.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

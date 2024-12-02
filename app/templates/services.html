@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Explore Infinitech's professional IT services, including computer repair, laptop repair, Wi-Fi repair, and more. Expert solutions tailored to meet your needs.">
+<meta name="keywords" content="IT services, computer repair, laptop repair, Wi-Fi repair, professional IT solutions">
+<meta property="og:title" content="Our Services - Infinitech">
+<meta property="og:description" content="Infinitech provides a wide range of IT services, from computer and laptop repairs to network solutions. Learn more about how we can help you.">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Our IT Services</h1>
+        <p>At Infinitech, we provide a comprehensive range of IT services to address all your technology needs. From hardware repairs to network solutions, our expert team is here to help.</p>
+    </div>
+
+    <!-- Services Overview -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-pc-display-horizontal fs-1 text-primary"></i>
+                        <h4>Computer Repairs</h4>
+                        <p>Expert diagnostics, hardware replacements, and software troubleshooting to get your desktop running smoothly again.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-laptop fs-1 text-success"></i>
+                        <h4>Laptop Repairs</h4>
+                        <p>Screen replacements, battery repairs, and performance optimization for all major laptop brands.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-wifi fs-1 text-warning"></i>
+                        <h4>Wi-Fi and Network Solutions</h4>
+                        <p>Diagnose and fix connectivity issues, optimize signals, and install secure networks for home and business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Services -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Advanced IT Solutions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cloud fs-1 text-info"></i>
+                        <h4>Cloud Solutions</h4>
+                        <p>Seamless cloud integration for businesses, including data backups and secure storage solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-lock fs-1 text-danger"></i>
+                        <h4>Cybersecurity</h4>
+                        <p>Protect your devices and networks from threats with advanced security solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-cpu fs-1 text-secondary"></i>
+                        <h4>Custom Builds</h4>
+                        <p>High-performance custom-built PCs tailored to your specific needs and preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="text-center my-5">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact Infinitech today for fast, reliable, and professional IT services tailored to your needs!</p>
+        <a href="/contact" class="btn btn-primary btn-lg">Contact Us</a>
+    </section>
+</div>
+{% endblock %}

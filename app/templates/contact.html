@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Get in touch with Infinitech for expert IT solutions. Contact us for hardware, software, and network support.">
+<meta name="keywords" content="contact Infinitech, IT solutions support, hardware support, software support, network support">
+<meta property="og:title" content="Contact Infinitech - Comprehensive IT Solutions">
+<meta property="og:description" content="Reach out to Infinitech for all your IT needs. Hardware, software, and network solutions.">
+<meta property="og:url" content="https://www.infinitech.com/contact">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-4">Contact Us</h1>
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-md-6 mb-4">
+            <h3>Send Us a Message</h3>
+            <form action="/contact/submit" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Business Details -->
+        <div class="col-md-6 mb-4">
+            <h3>Our Office</h3>
+            <p><strong>Address:</strong> 123 Tech Lane, Techville, CA 90210</p>
+            <p><strong>Phone:</strong> <a href="tel:+18005551234">+1-800-555-1234</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@infinitech.com">info@infinitech.com</a></p>
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p>Saturday - Sunday: Closed</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

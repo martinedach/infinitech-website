@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Repair in {{ suburb | title }} - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Reliable laptop repair services in {{ suburb | title }}, New Zealand. Infinitech offers screen repairs, battery replacements, keyboard fixes, and performance optimization tailored to your needs.">
+<meta name="keywords" content="laptop repair {{ suburb | lower }}, laptop screen replacement {{ suburb | lower }}, keyboard repair {{ suburb | lower }}, battery replacement {{ suburb | lower }}">
+<meta property="og:title" content="Laptop Repair in {{ suburb | title }} - Infinitech">
+<meta property="og:description" content="Infinitech provides professional laptop repair services in {{ suburb | title }}. Expert screen, keyboard, and battery repairs for all major laptop brands.">
+<meta property="og:url" content="https://www.infinitech.com/laptop-repair/{{ suburb | lower }}">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laptop Repair",
+  "areaServed": "{{ suburb | title }}, New Zealand",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Infinitech",
+    "url": "https://www.infinitech.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ suburb | title }}",
+      "addressCountry": "NZ"
+    }
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+<!-- Hero Section -->
+<div class="hero" style="background-color: var(--background);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <h1 class="display-3 fw-bold" style="color: var(--primary-dark);">Reliable Laptop Repair in {{ suburb | title }}</h1>
+                <p class="lead mt-4" style="color: var(--text-secondary);">
+                    Infinitech offers fast, reliable, and professional laptop repair services in {{ suburb | title }}. Whether you need a screen replacement, keyboard repair, or performance optimization, we’re here to help.
+                </p>
+                <a href="/services/laptop-repair" class="btn btn-lg" style="background-color: var(--button-primary); color: var(--button-text);">Discover Our Services</a>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <img src="/static/images/laptop-repair.svg" alt="Laptop Repair in {{ suburb | title }}" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Why Choose Us -->
+<section class="mb-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Why Choose Infinitech for Laptop Repairs?</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-speedometer2 fs-1" style="color: var(--primary-light);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Quick Turnaround</h4>
+                        <p style="color: var(--text-secondary);">Same-day and next-day repair services for minimal downtime.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-gear-wide-connected fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Experienced Technicians</h4>
+                        <p style="color: var(--text-secondary);">Skilled experts with years of experience in laptop repairs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-wallet2 fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Affordable Pricing</h4>
+                        <p style="color: var(--text-secondary);">Cost-effective solutions with no hidden fees.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-shield-lock fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Guaranteed Quality</h4>
+                        <p style="color: var(--text-secondary);">All repairs backed by our service warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Our Laptop Repair Services -->
+<section class="mb-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Our Laptop Repair Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-display fs-1" style="color: var(--primary-light);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Screen Replacement</h4>
+                        <p style="color: var(--text-secondary);">Fix broken or malfunctioning laptop screens with precision.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-battery fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Battery Replacement</h4>
+                        <p style="color: var(--text-secondary);">Replace faulty or worn-out batteries for improved performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-keyboard fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Keyboard Repair</h4>
+                        <p style="color: var(--text-secondary);">Fix unresponsive or damaged laptop keyboards efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Upgrade Benefits Section -->
+<section class="mb-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Enhance Your Laptop’s Performance</h2>
+        <div class="row">
+            <!-- SSD Upgrade -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-lightning fs-1" style="color: var(--primary-light);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">SSD Upgrade</h4>
+                        <p style="color: var(--text-secondary);">
+                            Switching to a solid-state drive (SSD) can dramatically improve your Laptop’s speed. Enjoy faster boot times, quicker application launches, and seamless multitasking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Battery Replacement -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-battery-charging fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Battery Replacement</h4>
+                        <p style="color: var(--text-secondary);">
+                            Is your laptop dying too quickly? A new battery can restore hours of productivity and ensure your device stays reliable during critical tasks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- RAM Upgrade -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-memory fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">RAM Upgrade</h4>
+                        <p style="color: var(--text-secondary);">
+                            Boost your system’s multitasking capabilities by upgrading its RAM. Experience smoother performance, especially with resource-intensive applications and gaming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Statistics Section -->
+   <section class="py-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Our Proven Track Record</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-3">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--primary-light);">10K+</h3>
+                        <p class="text-secondary">Computers Repaired</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--success);">98%</h3>
+                        <p class="text-secondary">Customer Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--warning);">5 Years</h3>
+                        <p class="text-secondary">Experience in {{ suburb | title }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--danger);">100%</h3>
+                        <p class="text-secondary">Secure Repairs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Customer Testimonials -->
+<section class="mb-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <blockquote class="blockquote p-4 shadow-sm rounded" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
+                    <p class="mb-3" style="color: var(--text-secondary);">"Infinitech replaced my broken laptop screen in just a day. Fantastic service and great prices!"</p>
+                    <footer class="blockquote-footer" style="color: var(--primary-dark);">Emily R., {{ suburb | title }}</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6">
+                <blockquote class="blockquote p-4 shadow-sm rounded" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
+                    <p class="mb-3" style="color: var(--text-secondary);">"Their team fixed my keyboard issues quickly and efficiently. Highly recommend Infinitech for laptop repairs!"</p>
+                    <footer class="blockquote-footer" style="color: var(--primary-dark);">James L., {{ suburb | title }}</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- FAQ Section -->
+<section class="mb-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+                        How long does a typical laptop repair take?
+                    </button>
+                </h3>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="background-color: var(--text-on-primary); color: var(--text-secondary);">
+                        Most repairs are completed within 1 to 2 days. For urgent cases, same-day service may be available.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+                        Do you repair all laptop brands?
+                    </button>
+                </h3>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="background-color: var(--text-on-primary); color: var(--text-secondary);">
+                        Yes, we repair all major laptop brands, including Apple, Dell, HP, Lenovo, and more.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+                        Can I get a warranty on my laptop repair?
+                    </button>
+                </h3>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="background-color: var(--text-on-primary); color: var(--text-secondary);">
+                        Yes, all our repairs come with a standard service warranty for your peace of mind.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action -->
+<section class="text-center py-5" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+    <div class="container">
+        <h2 class="mb-3" style="color: var(--text-on-primary);">Need Expert Laptop Repairs in {{ suburb | title }}?</h2>
+        <p class="lead" style="color: var(--text-on-primary);">
+            Contact Infinitech today for fast, reliable, and affordable solutions tailored to your needs!
+        </p>
+        <a href="/contact" class="btn btn-lg px-5 py-3 shadow" style="background-color: var(--button-primary); color: var(--button-text); border-radius: 50px;">
+            Request a Quote
+        </a>
+    </div>
+</section>
+
+</div>
+{% endblock %}
+
