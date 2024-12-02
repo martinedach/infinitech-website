@@ -30,6 +30,14 @@ async def wifi_repair_suburb(request: Request, suburb: str):
         "wifi_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
     )
+    
+@router.get("/apple-repair/{suburb}", response_class=HTMLResponse)
+async def apple_repair_suburb(request: Request, suburb: str):
+    return templates.TemplateResponse(
+        "apple_repair.html",
+        {"request": request, "suburb": suburb, "suburbs": suburbs}
+    )
+    
 
 
 # Hardware Solutions Route

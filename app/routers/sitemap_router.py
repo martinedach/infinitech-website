@@ -4,7 +4,7 @@ from app.data.suburb import suburbs
 router = APIRouter()
 
 # Example services
-services = ["computer-repair", "laptop-repair", "wifi-repair"]
+services = ["computer-repair", "laptop-repair", "wifi-repair", "apple-repair"]
 # Example static pages
 static_pages = ["about", "contact", "services", "computer-repair", "services/cloud-deployment", "services/software-development", "services/network-services", "services/hardware-solutions"]
 # Add other categories or routes you want to include in the sitemap
