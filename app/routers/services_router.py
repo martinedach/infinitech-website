@@ -30,3 +30,21 @@ async def wifi_repair_suburb(request: Request, suburb: str):
         "wifi_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
     )
+
+
+# Hardware Solutions Route
+@router.get("/services/hardware-solutions", response_class=HTMLResponse)
+async def hardware_solutions(request: Request):
+    return templates.TemplateResponse("hardware_solutions.html", {"request": request, "suburbs": suburbs})
+
+# Software Development Route
+@router.get("/services/software-development", response_class=HTMLResponse)
+async def software_development(request: Request):
+    return templates.TemplateResponse("software_development.html", {"request": request, "suburbs": suburbs})
+
+# Network Services Route
+@router.get("/services/network-services", response_class=HTMLResponse)
+async def network_services(request: Request):
+    return templates.TemplateResponse("network_services.html", {"request": request, "suburbs": suburbs})
+
+
