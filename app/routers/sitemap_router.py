@@ -57,6 +57,12 @@ async def sitemap():
         xml += f"    <loc>{url}</loc>\n"
         xml += f"    <priority>0.5</priority>\n"
         xml += f"  </url>\n"
+
+    # Add 404 error page
+    xml += f"  <url>\n"
+    xml += f"    <loc>{base_url}/404</loc>\n"
+    xml += f"    <priority>0.3</priority>\n"
+    xml += f"  </url>\n"
     
     # Close the URL set
     xml += "</urlset>"

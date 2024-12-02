@@ -3,47 +3,97 @@
 {% block title %}Contact Us - Infinitech{% endblock %}
 
 {% block meta %}
-<meta name="description" content="Get in touch with Infinitech for expert IT solutions. Contact us for hardware, software, and network support.">
-<meta name="keywords" content="contact Infinitech, IT solutions support, hardware support, software support, network support">
+<meta name="description" content="Get in touch with Infinitech for expert IT solutions in {{ suburb | title }}. Contact us for hardware, software, and network support tailored to your needs.">
+<meta name="keywords" content="contact Infinitech {{ suburb | lower }}, IT solutions {{ suburb | lower }}, hardware support {{ suburb | lower }}, software support {{ suburb | lower }}, network support {{ suburb | lower }}">
 <meta property="og:title" content="Contact Infinitech - Comprehensive IT Solutions">
-<meta property="og:description" content="Reach out to Infinitech for all your IT needs. Hardware, software, and network solutions.">
-<meta property="og:url" content="https://www.infinitech.com/contact">
+<meta property="og:description" content="Reach out to Infinitech for all your IT needs. Hardware, software, and network solutions in {{ suburb | title }}.">
+<meta property="og:url" content="https://infinitech.com/contact">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Infinitech",
+  "description": "Contact Infinitech for expert IT solutions in {{ suburb | title }}. Hardware, software, and network support.",
+  "url": "https://infinitech.com/contact",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-555-1234",
+    "contactType": "Customer Service"
+  },
+  "areaServed": "{{ suburb | title }}, New Zealand"
+}
+</script>
 {% endblock %}
 
 {% block content %}
 <div class="container py-5">
-    <h1 class="text-center mb-4">Contact Us</h1>
-    <div class="row">
-        <!-- Contact Form -->
-        <div class="col-md-6 mb-4">
-            <h3>Send Us a Message</h3>
-            <form action="/contact/submit" method="post">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+    <!-- Hero Section -->
+    <div class="hero" style="background-color: var(--background);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <h1 class="display-3 fw-bold" style="color: var(--primary-dark);">Contact Infinitech in {{ suburb | title }}</h1>
+                    <p class="lead mt-4" style="color: var(--text-secondary);">
+                        Reach out to Infinitech for expert hardware, software, and network solutions. We're here to provide reliable IT support tailored to your needs.
+                    </p>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                <div class="col-12 col-md-6 text-center">
+                    <img src="/static/images/contact-us.webp" alt="Contact Infinitech in {{ suburb | title }}" class="img-fluid rounded shadow">
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Your Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-
-        <!-- Business Details -->
-        <div class="col-md-6 mb-4">
-            <h3>Our Office</h3>
-            <p><strong>Address:</strong> 123 Tech Lane, Techville, CA 90210</p>
-            <p><strong>Phone:</strong> <a href="tel:+18005551234">+1-800-555-1234</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@infinitech.com">info@infinitech.com</a></p>
-            <h3>Business Hours</h3>
-            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-            <p>Saturday - Sunday: Closed</p>
+            </div>
         </div>
     </div>
+
+    <!-- Contact Form and Details Section -->
+    <section class="py-5" style="background-color: var(--background);">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-md-6 mb-4">
+                    <h2 style="color: var(--primary-dark);">Send Us a Message</h2>
+                    <form action="/contact/submit" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label" style="color: var(--primary-dark);">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label" style="color: var(--primary-dark);">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" style="color: var(--primary-dark);">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-md-6 mb-4">
+                    <h2 style="color: var(--primary-dark);">Our Office</h2>
+                    <p><strong style="color: var(--primary-dark);">Address:</strong> 72a Onslow Avenue, {{ suburb | title }}, New Zealand</p>
+                    <p><strong style="color: var(--primary-dark);">Phone:</strong> <a href="tel:+64272849916" style="color: var(--primary-light);">+64-272849916</a></p>
+                    <p><strong style="color: var(--primary-dark);">Email:</strong> <a href="mailto:info@infinitech.com" style="color: var(--primary-light);">info@infinitech.com</a></p>
+                    <h3 style="color: var(--primary-dark);">Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday - Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="text-center py-5" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+        <div class="container">
+            <h2 class="mb-3 fw-bold" style="color: var(--text-on-primary);">Need Expert IT Support in {{ suburb | title }}?</h2>
+            <p class="mb-4" style="color: var(--text-on-primary); font-size: 1.2rem;">
+                Contact Infinitech today for professional, reliable, and affordable IT solutions tailored to your needs!
+            </p>
+            <a href="/services" class="btn btn-lg px-5 py-3 shadow" style="background-color: var(--button-primary); color: var(--button-text); border-radius: 50px;">
+                View Our Services
+            </a>
+        </div>
+    </section>
 </div>
 {% endblock %}

@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi import Request
 from pathlib import Path
 from app.data.suburb import suburbs
@@ -72,3 +73,28 @@ async def software_page(request: Request):
 @app.get("/services/network", response_class=HTMLResponse)
 async def network_page(request: Request):
     return templates.TemplateResponse("network.html", {"request": request, "suburbs": suburbs})
+
+
+from fastapi.responses import PlainTextResponse
+
+@app.get("/robots.txt", response_class=PlainTextResponse)
+async def robots_txt():
+    content = """
+    User-agent: *
+    Disallow: /private
+    Disallow: /admin
+    Disallow: /hidden
+    Allow: /
+
+    Sitemap: https://infinitech.com/sitemap.xml
+    """
+    return content
+
+# Custom 404 handler
+@app.exception_handler(StarletteHTTPException)
+async def custom_404_handler(request: Request, exc: StarletteHTTPException):
+    if exc.status_code == 404:
+        return templates.TemplateResponse("404.html", {"request": request, "suburbs": suburbs}, status_code=404)
+    return HTMLResponse(content=str(exc.detail), status_code=exc.status_code)
+
+
