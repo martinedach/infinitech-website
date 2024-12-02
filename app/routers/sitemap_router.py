@@ -13,7 +13,7 @@ categories = ["computers", "laptops", "wifi"]
 
 @router.get("/sitemap.xml", response_class=Response)
 async def sitemap():
-    base_url = "http://127.0.0.1:8000"
+    base_url = "https://www.infinitech.com"
 
     # Generate XML sitemap
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
