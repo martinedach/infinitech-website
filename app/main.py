@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi import Request
 from pathlib import Path
@@ -74,8 +75,10 @@ async def software_page(request: Request):
 async def network_page(request: Request):
     return templates.TemplateResponse("network.html", {"request": request, "suburbs": suburbs})
 
-
-from fastapi.responses import PlainTextResponse
+# Network Support Page
+@app.get("/about-us", response_class=HTMLResponse)
+async def aboutus_page(request: Request):
+    return templates.TemplateResponse("aboutus.html", {"request": request, "suburbs": suburbs})
 
 @app.get("/robots.txt", response_class=PlainTextResponse)
 async def robots_txt():
