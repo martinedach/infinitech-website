@@ -42,68 +42,307 @@
 {% endblock %}
 
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container">
-        <h1 class="text-center mb-4" style="color: var(--primary-dark);">Network Services</h1>
-        <p class="text-center mb-5" style="color: var(--text-secondary);">
-            Stay connected with Infinitech’s reliable network services. From Wi-Fi optimizations to business network installations, we ensure your connectivity is fast, secure, and efficient.
-        </p>
+      <!-- Header Section -->
+<div class="text-center mb-5">
+    <h1 style="color: var(--primary-dark); font-size: 2.5rem; font-weight: 700;">Network Services</h1>
+    <p style="color: var(--text-secondary); font-size: 1.1rem;">
+        Stay connected with Infinitech’s reliable network services. From Wi-Fi optimizations to business network installations, we ensure your connectivity is fast, secure, and efficient.
+    </p>
+</div>
 
-        <!-- Network Installations -->
-        <div class="mb-5">
-            <h2 style="color: var(--primary-dark);">Network Installations</h2>
-            <p style="color: var(--text-secondary);">
+<!-- Network Installations Section -->
+<div class="mb-5">
+    <h2 class="text-center" style="color: var(--primary-dark); font-size: 2rem; font-weight: 600;">Network Installations</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Description -->
+            <p class="text-center mb-4" style="color: var(--text-secondary); font-size: 1.1rem;">
                 Whether you’re setting up a new home network or upgrading your office infrastructure, Infinitech provides comprehensive installation services. We design networks tailored to your requirements, ensuring seamless connectivity and scalability.
             </p>
-            <ul>
-                <li>Home network setup with optimized Wi-Fi coverage</li>
-                <li>Business network installations for small and large offices</li>
-                <li>Configuration of routers, switches, and access points</li>
-                <li>Secure network architecture with firewall integration</li>
-            </ul>
-        </div>
 
-        <!-- Network Troubleshooting -->
-        <div class="mb-5">
-            <h2 style="color: var(--primary-dark);">Network Troubleshooting</h2>
-            <p style="color: var(--text-secondary);">
+            <!-- Features List in Cards -->
+            <div class="row">
+                <!-- Home Network Setup -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Home Network Setup</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Optimized Wi-Fi coverage for your entire home, ensuring fast and stable connections for all devices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Network Installations -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Business Network Installations</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Tailored networking solutions for both small and large office environments, ensuring productivity and reliability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Configuration & Security -->
+            <div class="row">
+                <!-- Network Configuration -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-plug fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Network Configuration</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Professional setup and configuration of routers, switches, and access points for seamless network operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secure Network Architecture -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Secure Network Architecture</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We integrate robust security measures, including firewalls and encryption, to protect your network from potential threats.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+        <!-- Network Troubleshooting Section -->
+<div class="mb-5">
+    <h2 class="text-center" style="color: var(--primary-dark); font-size: 2rem; font-weight: 600;">Network Troubleshooting</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Description -->
+            <p class="text-center mb-4" style="color: var(--text-secondary); font-size: 1.1rem;">
                 Experiencing connectivity issues? Our team identifies and resolves network problems quickly, minimizing downtime and restoring your connection.
             </p>
-            <ul>
-                <li>Wi-Fi signal issues and interference resolution</li>
-                <li>Device connectivity problems</li>
-                <li>Network speed optimization</li>
-                <li>Repair and replacement of faulty hardware</li>
-            </ul>
-        </div>
 
-        <!-- Advanced Network Solutions -->
-        <div class="mb-5">
-            <h2 style="color: var(--primary-dark);">Advanced Network Solutions</h2>
-            <p style="color: var(--text-secondary);">
+            <!-- Troubleshooting Services in Cards -->
+            <div class="row">
+                <!-- Wi-Fi Issues -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-wifi fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Wi-Fi Signal Issues</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We resolve Wi-Fi interference and ensure strong, reliable signals throughout your space.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Device Connectivity Problems -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Device Connectivity</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We troubleshoot device connection issues, ensuring your devices stay connected and work seamlessly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Speed & Hardware Issues -->
+            <div class="row">
+                <!-- Network Speed Optimization -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tachometer-alt fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Network Speed Optimization</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We enhance your network speed, ensuring a smoother online experience and faster data transfers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hardware Repair & Replacement -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tools fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Hardware Repair & Replacement</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We repair or replace faulty network hardware, ensuring your system is functioning optimally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+       <!-- Advanced Network Solutions Section -->
+<div class="mb-5">
+    <h2 class="text-center" style="color: var(--primary-dark); font-size: 2rem; font-weight: 600;">Advanced Network Solutions</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Description -->
+            <p class="text-center mb-4" style="color: var(--text-secondary); font-size: 1.1rem;">
                 For businesses requiring advanced networking, we offer solutions to support growth and efficiency. Our services include VPN setup, network monitoring, and scalability planning.
             </p>
-            <ul>
-                <li>Virtual Private Network (VPN) configuration</li>
-                <li>Scalable network planning for growing businesses</li>
-                <li>Cloud network integration and hybrid setups</li>
-                <li>Real-time network monitoring and analytics</li>
-            </ul>
-        </div>
 
-        <!-- Why Choose Infinitech? -->
-        <div>
-            <h2 style="color: var(--primary-dark);">Why Choose Infinitech for Network Services?</h2>
-            <p style="color: var(--text-secondary);">
+            <!-- Solutions in Cards -->
+            <div class="row">
+                <!-- VPN Configuration -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-network-wired fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">VPN Configuration</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Secure your connections with custom VPN setups to protect your data and provide remote access.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scalable Network Planning -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-arrow-up fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Scalable Network Planning</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We design networks that grow with your business, ensuring scalability and flexibility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Integration & Monitoring -->
+            <div class="row">
+                <!-- Cloud Network Integration -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cloud fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Cloud Network Integration</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Seamlessly integrate cloud services with your network, including hybrid cloud solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-time Monitoring -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-line fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Network Monitoring & Analytics</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Track performance and ensure network uptime with real-time monitoring and analytics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        <!-- Why Choose Infinitech Section -->
+        <!-- Why Choose Infinitech Section -->
+<div class="mb-5">
+    <h2 class="text-center" style="color: var(--primary-dark); font-size: 2rem; font-weight: 600;">Why Choose Infinitech for Network Services?</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Description -->
+            <p class="text-center mb-5" style="color: var(--text-secondary); font-size: 1.1rem;">
                 At Infinitech, we prioritize secure and reliable networks that support your home or business needs. Our experienced team ensures every installation and troubleshooting session is efficient and tailored to your requirements.
             </p>
-            <ul>
-                <li>Expertise in home and business networking</li>
-                <li>Solutions tailored to your connectivity needs</li>
-                <li>Commitment to security and reliability</li>
-                <li>Friendly support and transparent pricing</li>
-            </ul>
+
+            <!-- Reasons in Cards -->
+            <div class="row">
+                <!-- Expertise in Networking -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="fas fa-home fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Expertise in Home & Business Networking</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We bring years of expertise in setting up and maintaining both home and business networks, ensuring smooth connectivity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tailored Solutions -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="fas fa-cogs fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Solutions Tailored to Your Needs</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                Our solutions are customized to meet your specific connectivity needs, ensuring efficient network performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commitment to Security -->
+            <div class="row">
+                <!-- Security & Reliability -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Commitment to Security & Reliability</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We prioritize security in every network installation and troubleshoot potential issues, ensuring your network remains reliable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friendly Support -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title" style="color: var(--primary-dark);">Friendly Support & Transparent Pricing</h5>
+                            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                                We offer transparent pricing and friendly, knowledgeable support to guide you through any network-related challenges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
+</div>
+
     </div>
 </section>
 {% endblock %}

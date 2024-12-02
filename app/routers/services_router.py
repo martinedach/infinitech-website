@@ -56,3 +56,7 @@ async def network_services(request: Request):
     return templates.TemplateResponse("network_services.html", {"request": request, "suburbs": suburbs})
 
 
+# Cloud Deployment Route
+@router.get("/services/cloud-deployment", response_class=HTMLResponse)
+async def cloud_deployment(request: Request):
+    return templates.TemplateResponse("cloud_deployment.html", {"request": request, "suburbs": suburbs})
