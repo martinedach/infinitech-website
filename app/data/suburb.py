@@ -1,6 +1,6 @@
 # Example list of suburbs
 suburbs = [
-    "new-zealand", "aucckland", "wellsford", "warkworth", "helensville", "kumeu-huapai", "muriwai",
+    "new-zealand", "auckland", "wellsford", "warkworth", "helensville", "kumeu-huapai", "muriwai",
     "riverhead", "dairy-flat", "waimauku", "snells-beach", "parakai",
     "coatesville", "muriwai-valley", "waitoki", "south-head", "sandspit",
     "tawharanui-peninsula", "puhoi-valley", "dome-valley-matakana",
