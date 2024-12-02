@@ -10,7 +10,33 @@
 <meta property="og:image" content="/static/images/hero-image.svg">
 <meta property="og:url" content="https://infinitech.com">
 <meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Computer Repair",
+  "areaServed": "{{ suburb | title }}, New Zealand",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Infinitech",
+    "url": "https://infinitech.com",
+    "logo": "https://infinitech.com/static/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "72a Onslow Avenue",
+      "addressLocality": "Epsom",
+      "addressRegion": "Auckland",
+      "postalCode": "1023",
+      "addressCountry": "NZ"
+    },
+    "telephone": "+64-272849916",
+    "openingHours": "Mo-Fr 09:00-18:00"
+  }
+}
+</script>
 {% endblock %}
+
 
 {% block content %}
 <!-- Hero Section -->
