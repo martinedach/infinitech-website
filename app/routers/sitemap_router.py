@@ -8,7 +8,7 @@ services = ["computer-repair", "laptop-repair", "wifi-repair"]
 # Example static pages
 static_pages = ["about", "contact", "services"]
 # Add other categories or routes you want to include in the sitemap
-blog_posts = ["post1", "post2", "post3"]  # Replace with actual blog post slugs if applicable
+blog_posts = ["post1", "post2", "post4"]  # Replace with actual blog post slugs if applicable
 categories = ["computers", "laptops", "wifi"]
 
 @router.get("/sitemap.xml", response_class=Response)
