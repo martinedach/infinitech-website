@@ -158,80 +158,69 @@
 
 
 
-            <!-- Dynamic Links Section -->
-            <div class="col-md-8">
-                <h5 class="text-left">Our Services by Location</h5>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h6 class="text-left">Computer Repair</h6>
-                        <ul class="list-unstyled">
-                            {% for suburb in suburbs[:3] %}
-                            <li><a href="/computer-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a></li>
-                            {% endfor %}
-                            <li class="d-none additional-links">
-                                {% for suburb in suburbs[3:] %}
-                                <a href="/computer-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a>
-                                {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-left">Laptop Repair</h6>
-                        <ul class="list-unstyled">
-                            {% for suburb in suburbs[:3] %}
-                            <li><a href="/laptop-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a></li>
-                            {% endfor %}
-                            <li class="d-none additional-links">
-                                {% for suburb in suburbs[3:] %}
-                                <a href="/laptop-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a>
-                                {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-left">Wi-Fi Repair</h6>
-                        <ul class="list-unstyled">
-                            {% for suburb in suburbs[:3] %}
-                            <li><a href="/wifi-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a></li>
-                            {% endfor %}
-                            <li class="d-none additional-links">
-                                {% for suburb in suburbs[3:] %}
-                                <a href="/wifi-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a>
-                                {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="text-left">Apple Repair</h6>
-                        <ul class="list-unstyled">
-                            {% for suburb in suburbs[:3] %}
-                            <li><a href="/apple-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a></li>
-                            {% endfor %}
-                            <li class="d-none additional-links">
-                                {% for suburb in suburbs[3:] %}
-                                <a href="/apple-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a>
-                                {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
+           <!-- Dynamic Links Section -->
+<div class="col-md-8">
+    <h5 class="text-left">Our Services by Location</h5>
+    <div class="row">
+        <div class="col-md-3">
+            <h6 class="text-left">Computer Repair</h6>
+            <ul class="list-unstyled">
+                <li><a href="/computer-repair/auckland" class="text-light">Auckland</a></li>
+                <li><a href="/computer-repair/cbd" class="text-light">CBD</a></li>
+                <li><a href="/computer-repair/epsom" class="text-light">Epsom</a></li>
+                <li class="d-none additional-links">
+                    <a href="/computer-repair/new-zealand" class="text-light">New Zealand</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-left">Laptop Repair</h6>
+            <ul class="list-unstyled">
+                <li><a href="/laptop-repair/auckland" class="text-light">Auckland</a></li>
+                <li><a href="/laptop-repair/cbd" class="text-light">CBD</a></li>
+                <li><a href="/laptop-repair/epsom" class="text-light">Epsom</a></li>
+                <li class="d-none additional-links">
+                    <a href="/laptop-repair/new-zealand" class="text-light">New Zealand</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-left">Wi-Fi Repair</h6>
+            <ul class="list-unstyled">
+                <li><a href="/wifi-repair/auckland" class="text-light">Auckland</a></li>
+                <li><a href="/wifi-repair/cbd" class="text-light">CBD</a></li>
+                <li><a href="/wifi-repair/epsom" class="text-light">Epsom</a></li>
+                <li class="d-none additional-links">
+                    <a href="/wifi-repair/new-zealand" class="text-light">New Zealand</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-left">Apple Repair</h6>
+            <ul class="list-unstyled">
+                <li><a href="/apple-repair/auckland" class="text-light">Auckland</a></li>
+                <li><a href="/apple-repair/cbd" class="text-light">CBD</a></li>
+                <li><a href="/apple-repair/epsom" class="text-light">Epsom</a></li>
+                <li class="d-none additional-links">
+                    <a href="/apple-repair/new-zealand" class="text-light">New Zealand</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6 class="text-left">Printer Repair</h6>
+            <ul class="list-unstyled">
+                <li><a href="/printer-repair/auckland" class="text-light">Auckland</a></li>
+                <li><a href="/printer-repair/cbd" class="text-light">CBD</a></li>
+                <li><a href="/printer-repair/epsom" class="text-light">Epsom</a></li>
+                <li class="d-none additional-links">
+                    <a href="/printer-repair/new-zealand" class="text-light">New Zealand</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="btn btn-outline-light mt-3" id="toggleFooter">View More Locations</button>
+</div>
 
-                    <div class="col-md-3">
-                        <h6 class="text-left">Printer Repair</h6>
-                        <ul class="list-unstyled">
-                            {% for suburb in suburbs[:3] %}
-                            <li><a href="/printer-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a></li>
-                            {% endfor %}
-                            <li class="d-none additional-links">
-                                {% for suburb in suburbs[3:] %}
-                                <a href="/printer-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a>
-                                {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <button class="btn btn-outline-light mt-3" id="toggleFooter">View More Locations</button>
-            </div>
 
 
 
