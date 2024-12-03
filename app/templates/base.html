@@ -216,6 +216,21 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div class="col-md-3">
+                        <h6 class="text-left">Printer Repair</h6>
+                        <ul class="list-unstyled">
+                            {% for suburb in suburbs[:3] %}
+                            <li><a href="/printer-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a></li>
+                            {% endfor %}
+                            <li class="d-none additional-links">
+                                {% for suburb in suburbs[3:] %}
+                                <a href="/printer-repair/{{ suburb }}" class="text-light">{{ suburb | title }}</a>
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
                 <button class="btn btn-outline-light mt-3" id="toggleFooter">View More Locations</button>
             </div>

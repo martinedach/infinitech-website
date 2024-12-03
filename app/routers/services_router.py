@@ -39,6 +39,13 @@ async def apple_repair_suburb(request: Request, suburb: str):
     )
     
 
+@router.get("/printer-repair/{suburb}", response_class=HTMLResponse)
+async def printer_repair_suburb(request: Request, suburb: str):
+    return templates.TemplateResponse(
+        "printer_repair.html",
+        {"request": request, "suburb": suburb, "suburbs": suburbs}
+    )
+
 
 # Hardware Solutions Route
 @router.get("/services/hardware-solutions", response_class=HTMLResponse)
