@@ -47,6 +47,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-dark);
+    padding: 0.5rem 1.5rem; /* Add padding for better spacing */
 }
 
 .nav-links {
@@ -54,21 +55,67 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1.5rem;
+    gap: 1.5rem; /* Space between links */
 }
+
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-on-primary); /* Ensure link color is set to white */
+    color: var(--text-on-primary); /* Default text color */
     font-weight: 500;
-    transition: color 0.3s ease;
+    position: relative; /* Needed for hover underline effect */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .nav-links a:hover {
-    color: var(--primary-light); /* Hover color to light blue */
+    color: var(--primary-light); /* Hover color (e.g., light blue) */
 }
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    width: 0; /* Initially no underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: var(--primary-light); /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for underline expansion */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
 .navbar-brand, .nav-link {
     color: var(--text-on-primary) !important;
+    font-weight: 600; /* Slightly bolder for branding */
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-size: 1.25rem; /* Slightly larger font for branding */
+    padding-right: 1rem; /* Space between brand and links */
+}
+
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Adjust spacing for stacked links */
+        align-items: flex-start; /* Align links to the left */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack brand and links */
+        align-items: flex-start; /* Align everything to the left */
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem; /* Space between brand and links */
+    }
 }
 
 /* Hero Section */

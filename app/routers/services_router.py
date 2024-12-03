@@ -98,3 +98,9 @@ async def remote_it_support(request: Request):
 @router.get("/services/managed-it-services", response_class=HTMLResponse)
 async def managed_it_services(request: Request):
     return templates.TemplateResponse("managed_it_services.html", {"request": request, "suburbs": suburbs})
+
+
+# Remote Work Support Package Route
+@router.get("/services/remote-work-support", response_class=HTMLResponse)
+async def remote_work_support(request: Request):
+    return templates.TemplateResponse("remote_work_support.html", {"request": request, "suburbs": suburbs})
