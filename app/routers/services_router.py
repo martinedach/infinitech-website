@@ -67,3 +67,28 @@ async def network_services(request: Request):
 @router.get("/services/cloud-deployment", response_class=HTMLResponse)
 async def cloud_deployment(request: Request):
     return templates.TemplateResponse("cloud_deployment.html", {"request": request, "suburbs": suburbs})
+
+
+
+# Microsoft 365 Setup, Maintenance, and Fix Route
+@router.get("/services/microsoft-365-support", response_class=HTMLResponse)
+async def microsoft_365_support(request: Request):
+    return templates.TemplateResponse("microsoft_365_support.html", {"request": request, "suburbs": suburbs})
+
+
+
+# Business IT Support Route
+@router.get("/services/business-it-support", response_class=HTMLResponse)
+async def business_it_support(request: Request):
+    return templates.TemplateResponse("business_it_support.html", {"request": request, "suburbs": suburbs})
+
+
+# Custom-Built PC Route
+@router.get("/services/custom-built-pc", response_class=HTMLResponse)
+async def custom_built_pc(request: Request):
+    return templates.TemplateResponse("custom_built_pc.html", {"request": request, "suburbs": suburbs})
+
+# Remote IT Support Route
+@router.get("/services/remote-it-support", response_class=HTMLResponse)
+async def remote_it_support(request: Request):
+    return templates.TemplateResponse("remote_it_support.html", {"request": request, "suburbs": suburbs})

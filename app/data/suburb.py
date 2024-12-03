@@ -28,5 +28,5 @@ suburbs = [
     "mt-wellington", "onehunga", "royal-oak", "hillsborough", "mangere",
     "otahuhu", "papatoetoe", "manukau", "botany-downs", "howick", "pakuranga",
     "whitford", "beachlands", "maraetai", "papakura", "takanini", "drury",
-    "pukekohe", "waiuku"
+    "pukekohe", "waiuku", "near me"
 ]

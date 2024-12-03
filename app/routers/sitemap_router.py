@@ -6,7 +6,11 @@ router = APIRouter()
 # Example services
 services = ["computer-repair", "laptop-repair", "wifi-repair", "apple-repair", "printer-repair"]
 # Example static pages
-static_pages = ["about", "contact", "services", "computer-repair", "about-us", "services/cloud-deployment", "services/software-development", "services/network-services", "services/hardware-solutions"]
+static_pages = ["about", "contact", "services", "computer-repair", "about-us", "services/cloud-deployment", 
+                "services/software-development", "services/network-services", "services/hardware-solutions",
+                "services/microsoft-365-support", "services/business-it-support", "services/custom-built-pc"]
+
+
 # Add other categories or routes you want to include in the sitemap
 blog_posts = ["post1", "post2", "post4"]  # Replace with actual blog post slugs if applicable
 categories = ["computers", "laptops", "wifi"]
