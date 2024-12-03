@@ -92,3 +92,9 @@ async def custom_built_pc(request: Request):
 @router.get("/services/remote-it-support", response_class=HTMLResponse)
 async def remote_it_support(request: Request):
     return templates.TemplateResponse("remote_it_support.html", {"request": request, "suburbs": suburbs})
+
+
+# Managed IT Services Route
+@router.get("/services/managed-it-services", response_class=HTMLResponse)
+async def managed_it_services(request: Request):
+    return templates.TemplateResponse("managed_it_services.html", {"request": request, "suburbs": suburbs})

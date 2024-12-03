@@ -8,7 +8,8 @@ services = ["computer-repair", "laptop-repair", "wifi-repair", "apple-repair", "
 # Example static pages
 static_pages = ["about", "contact", "services", "computer-repair", "about-us", "services/cloud-deployment", 
                 "services/software-development", "services/network-services", "services/hardware-solutions",
-                "services/microsoft-365-support", "services/business-it-support", "services/custom-built-pc"]
+                "services/microsoft-365-support", "services/business-it-support", "services/custom-built-pc",
+                "services/managed-it-services"]
 
 
 # Add other categories or routes you want to include in the sitemap
