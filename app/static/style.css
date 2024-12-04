@@ -306,3 +306,10 @@ footer a:hover {
         margin-bottom: 1.5rem;
     }
 }
+
+
+
+
+.text-primary {
+    color: #01374E !important; /* Example primary color in Bootstrap */
+  }
