@@ -23,10 +23,10 @@ class Lead(Base):
 Base.metadata.create_all(bind=engine)
 
 # Email Configuration
-SMTP_SERVER = "smtp.example.com"
+SMTP_SERVER = "smtp.office365.com"
 SMTP_PORT = 587
-SMTP_USER = "your-email@example.com"
-SMTP_PASS = "your-email-password"
+SMTP_USER = "martin@infinitech.co.nz"
+SMTP_PASS = "mfrpmcmsgvzdmqtc"
 
 # Create the router
 router = APIRouter()
@@ -48,8 +48,8 @@ async def handle_quote(
     # Send email notification
     try:
         msg = MIMEMultipart()
-        msg["From"] = SMTP_USER
-        msg["To"] = "admin@example.com"
+        msg["From"] = "info@infinitech.co.nz"
+        msg["To"] = email
         msg["Subject"] = "New Quote Request"
         body = f"Name: {name}\nEmail: {email}\nService: {service}\nMessage: {message}"
         msg.attach(MIMEText(body, "plain"))
@@ -57,7 +57,7 @@ async def handle_quote(
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
             server.starttls()
             server.login(SMTP_USER, SMTP_PASS)
-            server.sendmail(SMTP_USER, "admin@example.com", msg.as_string())
+            server.sendmail(SMTP_USER, "info@infinitech.co.nz", msg.as_string())
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to send email: {e}")
 
