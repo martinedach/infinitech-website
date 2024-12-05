@@ -11,28 +11,37 @@
 <meta property="og:type" content="website">
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Printer Repair",
-  "areaServed": "{{ suburb | title }}, New Zealand",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Infinitech",
-    "url": "https://infinitech.com",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "72a Onslow Avenue",
-        "addressLocality": "Epsom",
-        "addressRegion": "Auckland",
-        "postalCode": "1023",
-        "addressCountry": "NZ"
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Printer Repair Services",
+      "description": "Infinitech offers expert printer repair services to ensure your printers are functioning smoothly and efficiently.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Infinitech",
+        "url": "https://infinitech.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "72a Onslow Avenue",
+          "addressLocality": "Epsom",
+          "addressRegion": "Auckland",
+          "postalCode": "1023",
+          "addressCountry": "NZ"
+        },
+        "telephone": "+64-272849916",
+        "openingHours": "Mo-Fr 09:00-18:00"
       },
-      "telephone": "+64-272849916",
-      "openingHours": "Mo-Fr 09:00-18:00",
-  }
-}
-</script>
+      "areaServed": {
+        "@type": "Place",
+        "name": "{{ suburb | title }}, New Zealand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://infinitech.com/services/printer-repair"
+      }
+    }
+    </script>
+    
 {% endblock %}
 
 {% block content %}

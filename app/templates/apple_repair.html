@@ -11,29 +11,37 @@
 <meta property="og:type" content="website">
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Apple Repair",
-  "areaServed": "{{ suburb | title }}, New Zealand",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Infinitech",
-    "url": "https://infinitech.com",
-    "logo": "https://infinitech.com/static/images/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "72a Onslow Avenue",
-      "addressLocality": "Epsom",
-      "addressRegion": "Auckland",
-      "postalCode": "1023",
-      "addressCountry": "NZ"
-    },
-    "telephone": "+64-272849916",
-    "openingHours": "Mo-Fr 09:00-18:00"
-  }
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Apple Repair Services",
+      "description": "Infinitech provides expert Apple repair services, ensuring your devices are back to working condition quickly and efficiently.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Infinitech",
+        "image": "https://infinitech.com/static/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "72a Onslow Avenue",
+          "addressLocality": "Epsom",
+          "addressRegion": "Auckland",
+          "postalCode": "1023",
+          "addressCountry": "NZ"
+        },
+        "telephone": "+64-272849916",
+        "url": "https://infinitech.com"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "{{ suburb | title }}, New Zealand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://infinitech.com/services/apple-repair"
+      }
+    }
+    </script>
+    
 {% endblock %}
 
 {% block content %}

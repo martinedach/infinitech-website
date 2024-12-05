@@ -11,29 +11,39 @@
 <meta property="og:type" content="website">
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Computer Repair",
-  "areaServed": "{{ suburb | title }}, New Zealand",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Infinitech",
-    "url": "https://infinitech.com",
-          "logo": "https://infinitech.com/static/images/logo.png",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "72a Onslow Avenue",
-            "addressLocality": "Epsom",
-            "addressRegion": "Auckland",
-            "postalCode": "1023",
-            "addressCountry": "NZ"
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Computer Repair Services",
+          "description": "Infinitech offers professional computer repair services to ensure your devices are running smoothly and efficiently.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Infinitech",
+            "image": "https://infinitech.com/static/images/logo.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "72a Onslow Avenue",
+              "addressLocality": "Epsom",
+              "addressRegion": "Auckland",
+              "postalCode": "1023",
+              "addressCountry": "NZ"
+            },
+            "telephone": "+64-272849916",
+            "url": "https://infinitech.com",
+            "openingHours": "Mo-Fr 09:00-18:00"
           },
-          "telephone": "+64-272849916",
-          "openingHours": "Mo-Fr 09:00-18:00",
-  }
-}
-</script>
+          "areaServed": {
+            "@type": "Place",
+            "name": "{{ suburb | title }}, New Zealand"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://infinitech.com/services/computer-repair"
+          }
+        }
+        </script>
+        
 {% endblock %}
 
 {% block content %}

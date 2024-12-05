@@ -10,26 +10,36 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://infinitech.co.nz/services">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "IT Services",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Infinitech",
-    "url": "https://infinitech.co.nz",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "72a Onslow Avenue",
-      "addressLocality": "Epsom",
-      "addressRegion": "Auckland",
-      "postalCode": "1023",
-      "addressCountry": "NZ"
-    },
-    "telephone": "+64-272849916"
-  }
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "IT Services",
+      "description": "Infinitech provides comprehensive IT services, ensuring your business and personal systems are running seamlessly.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Infinitech",
+        "url": "https://infinitech.co.nz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "72a Onslow Avenue",
+          "addressLocality": "Epsom",
+          "addressRegion": "Auckland",
+          "postalCode": "1023",
+          "addressCountry": "NZ"
+        },
+        "telephone": "+64-272849916"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Auckland, New Zealand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://infinitech.co.nz/services/it-services"
+      }
+    }
+    </script>
+    
 {% endblock %}
 
 {% block content %}
