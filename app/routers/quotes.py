@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 
 # Database setup
 Base = declarative_base()
-DATABASE_URL = "sqlite:///./leads.db"
+DATABASE_URL = "postgresql://user:password@db:5432/fastapi_db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
@@ -40,10 +40,15 @@ async def handle_quote(
 ):
     # Save lead to database
     db = SessionLocal()
-    lead = Lead(name=name, email=email, service=service, message=message)
-    db.add(lead)
-    db.commit()
-    db.close()
+    try:
+        lead = Lead(name=name, email=email, service=service, message=message)
+        db.add(lead)
+        db.commit()
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Failed to save lead to database: {e}")
+    finally:
+        db.close()
 
     # Send email notification
     try:
