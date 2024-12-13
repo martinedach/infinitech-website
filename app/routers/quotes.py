@@ -6,22 +6,9 @@ from email.mime.multipart import MIMEMultipart
 from sqlalchemy import Column, Integer, String, Text, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from app.db.database import SessionLocal
+from app.models import Lead
 
-# Database setup
-Base = declarative_base()
-DATABASE_URL = "postgresql://user:password@db:5432/fastapi_db"
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-class Lead(Base):
-    __tablename__ = "leads"
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
-    email = Column(String, nullable=False)
-    service = Column(String, nullable=False)
-    message = Column(Text, nullable=False)
-
-Base.metadata.create_all(bind=engine)
 
 # Email Configuration
 SMTP_SERVER = "smtp.office365.com"
