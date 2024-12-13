@@ -22,9 +22,7 @@ else
     echo "No running container found for service $SERVICE_NAME. Proceeding with build."
 fi
 
-# Prune unused Docker resources
-echo "Pruning unused Docker resources..."
-docker system prune -af --volumes || { echo "Failed to prune Docker system. Exiting."; exit 1; }
+
 
 # Build and restart the container using docker-compose
 echo "Building and starting new container for service $SERVICE_NAME..."
