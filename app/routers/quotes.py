@@ -7,7 +7,7 @@ from sqlalchemy import Column, Integer, String, Text, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from app.db.database import SessionLocal
-from app.models import Lead
+from app.models.models import Lead
 
 
 # Email Configuration
