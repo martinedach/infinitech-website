@@ -4,14 +4,24 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
+from contextlib import asynccontextmanager
 from fastapi import Request
 from pathlib import Path
 from app.data.suburb import suburbs
+from app.db.database import create_tables
 from app.routers.quotes import router as quotes_router
 from app.routers.services_router import router as services_router
 from app.routers.sitemap_router import router as sitemap_router
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup tasks
+    create_tables()
+    yield  # The app runs here
+    # Shutdown tasks (if needed)
+
+app = FastAPI(lifespan=lifespan)
+
 
 # Set up templates and static files
 templates = Jinja2Templates(directory="app/templates")

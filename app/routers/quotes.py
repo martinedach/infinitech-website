@@ -34,15 +34,16 @@ router = APIRouter()
 async def handle_quote(
     name: str = Form(...),
     email: str = Form(...),
+    phone: str = Form(...),
     message: str = Form(...)
 ):
     # Save lead to database
     db = SessionLocal()
     try:
-        lead = Lead(name=name, email=email, service='null', message=message)
+        lead = Lead(name=name, email=email, phone=phone, service='null', message=message)
         db.add(lead)
         db.commit()
-        logger.info(f"New submission: Name={name}, Email={email}, Service=null, Message={message}")
+        logger.info(f"New submission: Name={name}, Email={email}, Phone={phone} Service=null, Message={message}")
     except Exception as e:
         db.rollback()
         logger.error(f"Failed to save submission: {e}")
@@ -56,7 +57,7 @@ async def handle_quote(
         msg["From"] = "info@infinitech.co.nz"
         msg["To"] = email
         msg["Subject"] = "New Quote Request"
-        body = f"Name: {name}\nEmail: {email}\nService:  null\nMessage: {message}"
+        body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nService:  null\nMessage: {message}"
         msg.attach(MIMEText(body, "plain"))
 
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
