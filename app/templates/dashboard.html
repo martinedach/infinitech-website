@@ -1,0 +1,31 @@
+{% extends "dashboard_base.html" %}
+
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Admin Dashboard</h2>
+    <p>Welcome back, {{ user.username }}!</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Users</h5>
+                    <p>View and manage all users.</p>
+                    <a href="/admin/users/" class="btn btn-primary">Go to Users</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">System Logs</h5>
+                    <p>Check recent activity logs.</p>
+                    <a href="/admin/logs" class="btn btn-primary">View Logs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

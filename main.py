@@ -3,24 +3,27 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import PlainTextResponse
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from contextlib import asynccontextmanager
 from fastapi import Request
 from pathlib import Path
 from app.data.suburb import suburbs
-from app.db.database import create_tables
+from app.db.database import create_tables_and_populate
 from app.routers.quotes import router as quotes_router
 from app.routers.services_router import router as services_router
 from app.routers.sitemap_router import router as sitemap_router
+from app.routers.admin_router import router as admin_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup tasks
-    create_tables()
+    create_tables_and_populate()
     yield  # The app runs here
     # Shutdown tasks (if needed)
 
 app = FastAPI(lifespan=lifespan)
+
 
 
 # Set up templates and static files
@@ -30,7 +33,17 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 app.include_router(quotes_router)
 app.include_router(services_router)
 app.include_router(sitemap_router)
+app.include_router(admin_router)
 
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust for production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 
