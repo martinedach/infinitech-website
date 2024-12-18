@@ -8,10 +8,10 @@ router = APIRouter()
 # Example services
 services = ["computer-repair", "laptop-repair", "wifi-repair", "apple-repair", "printer-repair"]
 # Example static pages
-static_pages = ["about", "contact", "services", "computer-repair", "about-us", "services/cloud-deployment", 
+static_pages = ["about", "contact", "services", "about-us", "services/cloud-deployment", 
                 "services/software-development", "services/network-services", "services/hardware-solutions",
                 "services/microsoft-365-support", "services/business-it-support", "services/custom-built-pc",
-                "services/managed-it-services", "/services/remote-work-support"]
+                "services/managed-it-services", "services/remote-work-support"]
 
 
 # Add other categories or routes you want to include in the sitemap
@@ -49,7 +49,7 @@ async def sitemap(db: Session = Depends(get_db)):
         url = f"{base_url}/{page}"
         xml += f"  <url>\n"
         xml += f"    <loc>{url}</loc>\n"
-        xml += f"    <priority>0.6</priority>\n"
+        xml += f"    <priority>0.8</priority>\n"
         xml += f"  </url>\n"
     
     # Add service pages for each suburb

@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from app.auth.auth import get_current_user, authenticate_user, create_access_token, get_password_hash
 from app.db.database import get_db
 from app.models.models import User as DBUser 
-from app.models.models import Lead
+from app.models.models import Lead, Suburb
 from app.models.pymodels import UserCreate, UserRead  # Adjust if necessary
 import os
 
@@ -112,4 +112,71 @@ def view_leads(request: Request, db: Session = Depends(get_db)):
     leads = db.query(Lead).all()  # Fetch all leads from the database
     return templates.TemplateResponse(
         "leads.html", {"request": request, "leads": leads, "title": "Leads Management"}
+    )
+    
+    
+    
+@router.post("/suburbs/add")
+def add_suburb(
+    name: str = Form(...),
+    city: str = Form(...),
+    region: str = Form(...),
+    postcode: str = Form(...),
+    latitude: Optional[float] = Form(None),
+    longitude: Optional[float] = Form(None),
+    db: Session = Depends(get_db),
+    user: dict = Depends(get_current_user)  # Optional: Restrict access to authenticated users
+):
+    # Check if the suburb already exists
+    existing_suburb = db.query(Suburb).filter(Suburb.name == name).first()
+    if existing_suburb:
+        raise HTTPException(status_code=400, detail="Suburb already exists.")
+
+    # Add the new suburb
+    new_suburb = Suburb(
+        name=name,
+        city=city,
+        region=region,
+        postcode=postcode,
+        latitude=latitude,
+        longitude=longitude,
+    )
+    db.add(new_suburb)
+    db.commit()
+    db.refresh(new_suburb)
+
+    # Redirect back to the suburbs management page
+    return RedirectResponse(url="/admin/suburbs", status_code=303)
+    
+    
+@router.post("/suburbs/remove")
+def remove_suburb(
+    id: int = Form(...),
+    db: Session = Depends(get_db),
+    user: dict = Depends(get_current_user)  # Optional: Restrict access to authenticated users
+):
+    # Check if the suburb exists
+    suburb = db.query(Suburb).filter(Suburb.id == id).first()
+    if not suburb:
+        raise HTTPException(status_code=404, detail="Suburb not found.")
+
+    # Remove the suburb
+    db.delete(suburb)
+    db.commit()
+
+    # Redirect back to the suburbs management page
+    return RedirectResponse(url="/admin/suburbs", status_code=303)
+
+
+
+@router.get("/suburbs", response_class=HTMLResponse)
+def view_suburbs(
+    request: Request,
+    db: Session = Depends(get_db),
+    user: dict = Depends(get_current_user)  # Optional: Restrict access to authenticated users
+):
+    # Fetch all suburbs
+    suburbs = db.query(Suburb).all()
+    return templates.TemplateResponse(
+        "suburbs.html", {"request": request, "suburbs": suburbs, "title": "Suburbs Management"}
     )
