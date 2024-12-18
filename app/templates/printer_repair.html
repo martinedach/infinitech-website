@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Printer Repair in {{ suburb | title }} - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Expert printer repair services in {{ suburb | title }}, New Zealand. Infinitech specializes in fixing inkjet, laser printers, paper jams, and other common printer issues.">
+<meta name="keywords" content="printer repair {{ suburb | lower }}, inkjet repair {{ suburb | lower }}, laser printer repair {{ suburb | lower }}, paper jam fix {{ suburb | lower }}">
+<meta property="og:title" content="Printer Repair in {{ suburb | title }} - Infinitech">
+<meta property="og:description" content="Infinitech offers reliable printer repair services in {{ suburb | title }}. Fixing inkjet, laser, and paper jam issues efficiently.">
+<meta property="og:url" content="https://infinitech.com/printer-repair/{{ suburb | lower }}">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Printer Repair Services",
+      "description": "Infinitech offers expert printer repair services to ensure your printers are functioning smoothly and efficiently.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Infinitech",
+        "url": "https://infinitech.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "72a Onslow Avenue",
+          "addressLocality": "Epsom",
+          "addressRegion": "Auckland",
+          "postalCode": "1023",
+          "addressCountry": "NZ"
+        },
+        "telephone": "+64-272849916",
+        "openingHours": "Mo-Fr 09:00-18:00"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "{{ suburb | title }}, New Zealand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://infinitech.com/services/printer-repair"
+      }
+    }
+    </script>
+    
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+<!-- Hero Section -->
+<div class="hero" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <h1 class="display-3 fw-bold" style="color: var(--primary-dark);">Professional Printer Repair in {{ suburb | title }}</h1>
+                <p class="lead mt-4" style="color: var(--text-secondary);">
+                    Infinitech provides expert printer repair services in {{ suburb | title }}. Whether it's fixing inkjet or laser printers, resolving paper jams, or general maintenance, we have you covered.
+                </p>
+                <a href="/services" class="btn btn-lg" style="background-color: var(--button-primary); color: var(--button-text);">Explore Our Services</a>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <img src="/static/images/printer-repair-nz.webp" alt="Printer Repair in {{ suburb | title }}" class="img-fluid rounded shadow" data-aos="fade-left">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Us -->
+<section class="mb-5" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Why Choose Infinitech for Printer Repairs?</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100" data-aos="fade-up">
+                    <div class="card-body text-center">
+                        <i class="bi bi-printer fs-1" style="color: var(--primary-light);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Fast Turnaround</h4>
+                        <p style="color: var(--text-secondary);">Same-day or next-day service for most printer repairs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-tools fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Experienced Technicians</h4>
+                        <p style="color: var(--text-secondary);">Our experts handle all types of printers with precision and care.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-body text-center">
+                        <i class="bi bi-wallet2 fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Affordable Prices</h4>
+                        <p style="color: var(--text-secondary);">Competitive pricing with no hidden costs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-body text-center">
+                        <i class="bi bi-shield-lock fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Guaranteed Quality</h4>
+                        <p style="color: var(--text-secondary);">All repairs come with a warranty for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Printer Repair Services -->
+<section class="mb-5" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Our Printer Repair Services</h2>
+        <div class="row">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-printer fs-1" style="color: var(--primary-light);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Inkjet Printer Repair</h4>
+                        <p style="color: var(--text-secondary);">Expert inkjet printer repair services for efficient printing performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-gear fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Laser Printer Repair</h4>
+                        <p style="color: var(--text-secondary);">We repair and maintain laser printers, ensuring optimal performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-file-earmark fs-1" style="color: var(--icon-color);"></i>
+                        <h4 class="mt-3" style="color: var(--primary-dark);">Paper Jam Fixes</h4>
+                        <p style="color: var(--text-secondary);">Fast and effective solutions for paper jams and other common printer issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="mb-5" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <blockquote class="blockquote p-4 shadow-sm rounded" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
+                    <p class="mb-3" style="color: var(--text-secondary);">"Infinitech solved my printer issues quickly. Great service and very affordable!"</p>
+                    <div class="blockquote-footer" style="color: var(--primary-dark);">Sophia W., {{ suburb | title }}</div>
+                </blockquote>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <blockquote class="blockquote p-4 shadow-sm rounded" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
+                    <p class="mb-3" style="color: var(--text-secondary);">"Their team is professional and their prices are unbeatable. Highly recommended!"</p>
+                    <div class="blockquote-footer" style="color: var(--primary-dark);">John P., {{ suburb | title }}</div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="text-center py-5" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Get in Touch for Printer Repairs in {{ suburb | title }}</h2>
+        <p style="color: var(--text-secondary);">Contact us today for fast and professional printer repair services in {{ suburb | title }}.</p>
+        <a href="/contact" class="btn btn-lg" style="background-color: var(--button-primary); color: var(--button-text);">Contact Us</a>
+    </div>
+</section>
+
+</div>
+{% endblock %}

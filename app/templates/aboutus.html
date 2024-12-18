@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Learn more about Infinitech, a leading IT solutions provider specializing in hardware, software, and network services. Discover our story, mission, and values.">
+<meta name="keywords" content="about us, IT solutions, hardware, software, network services, company story, Infinitech">
+<meta property="og:title" content="About Us - Infinitech">
+<meta property="og:description" content="Discover Infinitech's story, values, and team behind the leading IT solutions provider in New Zealand.">
+<meta property="og:image" content="/static/images/hero-image.svg">
+<meta property="og:url" content="https://infinitech.co.nz/about-us">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero" style="background-color: var(--background);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center text-md-start" data-aos="fade-right">
+                <h1 class="display-3 fw-bold" style="color: var(--primary-dark);">About Infinitech</h1>
+                <p class="lead mt-4" style="color: var(--text-secondary);">
+                    We’re a passionate team providing cutting-edge IT solutions, from hardware repairs to custom-built systems, software development, and network services.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 text-center" data-aos="fade-left">
+                <img src="/static/images/about-us-hero.svg" alt="About Us Image" class="img-fluid" style="max-height: 400px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Story Section -->
+<section class="py-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="zoom-in">Our Story</h2>
+        <div class="row">
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-lg border-light">
+                    <div class="card-body">
+                        <p class="card-text" style="color: var(--text-secondary);">
+                            Founded with a vision to revolutionize IT services, Infinitech has become one of New Zealand's leading IT solutions providers. From our early days of providing hardware repairs to now offering a full suite of IT services, we pride ourselves on delivering innovative solutions that enhance productivity and efficiency for businesses and individuals alike.
+                        </p>
+                        <p class="card-text" style="color: var(--text-secondary);">
+                            Over the years, our team has grown, and so have the challenges we tackle. Whether it's designing custom-built systems, developing tailored software solutions, or offering secure and efficient network services, we are here to solve the toughest IT problems. Our commitment to quality and customer satisfaction is at the heart of everything we do.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Mission & Vision Section -->
+<section class="py-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="zoom-in">Our Mission & Vision</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-lg border-light">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: var(--primary-dark);">Our Mission</h5>
+                        <p class="card-text" style="color: var(--text-secondary);">
+                            Our mission is to provide innovative, reliable, and cost-effective IT solutions that empower businesses and individuals to achieve their full potential. We aim to deliver services that are not only efficient but also sustainable, ensuring long-term success for our clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-lg border-light">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: var(--primary-dark);">Our Vision</h5>
+                        <p class="card-text" style="color: var(--text-secondary);">
+                            Our vision is to be the leading provider of IT solutions in New Zealand, recognized for our commitment to quality, innovation, and customer satisfaction. We envision a future where technology empowers every business and individual to thrive in an increasingly digital world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Team Section 
+<section class="py-5" style="background-color: var(--background);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="zoom-in">Meet Our Team</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-lg border-light">
+                    <img src="/static/images/team-member-1.jpg" alt="Team Member" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: var(--primary-dark);">John Doe</h5>
+                        <p class="card-text" style="color: var(--text-secondary);">Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-lg border-light">
+                    <img src="/static/images/team-member-2.jpg" alt="Team Member" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: var(--primary-dark);">Jane Smith</h5>
+                        <p class="card-text" style="color: var(--text-secondary);">Project Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card shadow-lg border-light">
+                    <img src="/static/images/team-member-3.jpg" alt="Team Member" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: var(--primary-dark);">Emily Davis</h5>
+                        <p class="card-text" style="color: var(--text-secondary);">Senior Network Engineer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Call-to-Action Section -->
+<section class="text-center py-5" style="background-color: var(--primary-light); color: var(--text-on-primary);" data-aos="fade-in">
+    <div class="container">
+        <h2 class="mb-3" style="color: var(--text-on-primary);">Let’s Work Together</h2>
+        <p style="color: var(--text-on-primary);">Ready to get started? Contact us today for tailored IT solutions that fit your needs.</p>
+        <a href="/contact" class="btn" style="background-color: var(--button-primary); color: var(--button-text);">Get in Touch</a>
+    </div>
+</section>
+
+{% endblock %}

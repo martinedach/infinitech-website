@@ -1,0 +1,85 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}Suburbs Management{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Suburbs Management</h2>
+
+    <!-- Add Suburb Form -->
+    <div class="mb-4">
+        <h4>Add New Suburb</h4>
+        <form method="post" action="/admin/suburbs/add">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="name" class="form-label">Suburb Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="postcode" class="form-label">Postcode</label>
+                    <input type="text" class="form-control" id="postcode" name="postcode" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="region" class="form-label">Region</label>
+                    <input type="text" class="form-control" id="region" name="region" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="latitude" class="form-label">Latitude</label>
+                    <input type="number" step="any" class="form-control" id="latitude" name="latitude">
+                </div>
+                <div class="col-md-3">
+                    <label for="longitude" class="form-label">Longitude</label>
+                    <input type="number" step="any" class="form-control" id="longitude" name="longitude">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Add Suburb</button>
+        </form>
+    </div>
+
+    <!-- Suburbs Table -->
+    <div class="table-responsive">
+        <h4 class="mb-3">Existing Suburbs</h4>
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Region</th>
+                    <th>Postcode</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for suburb in suburbs %}
+                <tr>
+                    <td>{{ suburb.id }}</td>
+                    <td>{{ suburb.name }}</td>
+                    <td>{{ suburb.city }}</td>
+                    <td>{{ suburb.region }}</td>
+                    <td>{{ suburb.postcode }}</td>
+                    <td>{{ suburb.latitude }}</td>
+                    <td>{{ suburb.longitude }}</td>
+                    <td>
+                        <form method="post" action="/admin/suburbs/remove" class="d-inline">
+                            <input type="hidden" name="id" value="{{ suburb.id }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="8" class="text-center">No suburbs found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

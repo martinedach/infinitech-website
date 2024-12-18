@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+
+{% block title %}Apple Repair in {{ suburb | title }} - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Expert Apple repair services in {{ suburb | title }}, New Zealand. Infinitech specializes in repairing MacBooks, iPhones, iPads, and other Apple devices. Reliable, fast, and affordable solutions tailored to your needs.">
+<meta name="keywords" content="apple repair {{ suburb | lower }}, macbook repair {{ suburb | lower }}, iphone repair {{ suburb | lower }}, ipad repair {{ suburb | lower }}">
+<meta property="og:title" content="Apple Repair in {{ suburb | title }} - Infinitech">
+<meta property="og:description" content="Infinitech offers professional Apple repair services in {{ suburb | title }}. We handle MacBook, iPhone, and iPad repairs with care and precision.">
+<meta property="og:url" content="https://infinitech.com/apple-repair/{{ suburb | lower }}">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Apple Repair Services",
+      "description": "Infinitech provides expert Apple repair services, ensuring your devices are back to working condition quickly and efficiently.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Infinitech",
+        "image": "https://infinitech.com/static/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "72a Onslow Avenue",
+          "addressLocality": "Epsom",
+          "addressRegion": "Auckland",
+          "postalCode": "1023",
+          "addressCountry": "NZ"
+        },
+        "telephone": "+64-272849916",
+        "url": "https://infinitech.com"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "{{ suburb | title }}, New Zealand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://infinitech.com/services/apple-repair"
+      }
+    }
+    </script>
+    
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <!-- Hero Section -->
+  <div class="hero" style="background-color: var(--background);" data-aos="fade-up" data-aos-duration="1200">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-12 col-md-6 text-center text-md-start">
+                  <h1 class="display-3 fw-bold" style="color: var(--primary-dark);" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="100">Professional Apple Repair in {{ suburb | title }}</h1>
+                  <p class="lead mt-4" style="color: var(--text-secondary);" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+                      Infinitech offers expert Apple repair services in {{ suburb | title }}. From cracked iPhone screens to MacBook performance issues, we deliver fast and reliable solutions for all Apple devices.
+                  </p>
+                  <a href="/services" class="btn btn-lg" style="background-color: var(--button-primary); color: var(--button-text);" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">View Our Services</a>
+              </div>
+              <div class="col-12 col-md-6 text-center">
+                  <img src="/static/images/apple-repair-nz.webp" alt="Apple Repair in {{ suburb | title }}" class="img-fluid rounded shadow" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="700">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-5" style="background-color: var(--background);" data-aos="fade-up" data-aos-duration="1200">
+      <div class="container">
+          <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-down" data-aos-duration="1200">Why Infinitech for Apple Repairs?</h2>
+          <div class="row">
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+                  <div class="card shadow h-100">
+                      <div class="card-body text-center">
+                          <i class="bi bi-apple fs-1" style="color: var(--primary-light);"></i>
+                          <h5 class="card-title mt-3" style="color: var(--primary-dark);">Certified Technicians</h5>
+                          <p class="card-text" style="color: var(--text-secondary);">Experienced professionals certified to handle Apple devices with care.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                  <div class="card shadow h-100">
+                      <div class="card-body text-center">
+                          <i class="bi bi-phone fs-1" style="color: var(--icon-color);"></i>
+                          <h5 class="card-title mt-3" style="color: var(--primary-dark);">All Apple Devices</h5>
+                          <p class="card-text" style="color: var(--text-secondary);">From iPhones to MacBooks and iPads, we repair them all.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                  <div class="card shadow h-100">
+                      <div class="card-body text-center">
+                          <i class="bi bi-shield-check fs-1" style="color: var(--primary-dark);"></i>
+                          <h5 class="card-title mt-3" style="color: var(--primary-dark);">Genuine Parts</h5>
+                          <p class="card-text" style="color: var(--text-secondary);">We use only genuine parts for lasting repairs and reliable performance.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Services Offered -->
+  <section class="py-5" style="background-color: var(--background);" data-aos="fade-up" data-aos-duration="1200">
+      <div class="container">
+          <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-down" data-aos-duration="1200">Our Apple Repair Services</h2>
+          <div class="row">
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+                  <div class="card shadow h-100">
+                      <div class="card-body text-center">
+                          <i class="bi bi-phone-fill fs-1" style="color: var(--icon-color);"></i>
+                          <h5 class="card-title mt-3" style="color: var(--primary-dark);">iPhone Repair</h5>
+                          <p class="card-text" style="color: var(--text-secondary);">Screen replacements, battery issues, and water damage repairs.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                  <div class="card shadow h-100">
+                      <div class="card-body text-center">
+                          <i class="bi bi-laptop fs-1" style="color: var(--icon-color);"></i>
+                          <h5 class="card-title mt-3" style="color: var(--primary-dark);">MacBook Repair</h5>
+                          <p class="card-text" style="color: var(--text-secondary);">Fixing screen issues, performance slowdowns, and hardware repairs.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                  <div class="card shadow h-100">
+                      <div class="card-body text-center">
+                          <i class="bi bi-tablet-landscape fs-1" style="color: var(--icon-color);"></i>
+                          <h5 class="card-title mt-3" style="color: var(--primary-dark);">iPad Repair</h5>
+                          <p class="card-text" style="color: var(--text-secondary);">Cracked screens, software fixes, and battery replacements.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+  <!-- Statistics Section -->
+<section class="py-5" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-down" data-aos-delay="100">Our Proven Track Record</h2>
+        <div class="row">
+            <!-- Card 1: Computers Repaired -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-right" data-aos-delay="200">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--primary-light);">10K+</h3>
+                        <p class="text-secondary">Computers Repaired</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Customer Satisfaction -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--success);">98%</h3>
+                        <p class="text-secondary">Customer Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3: Experience in Suburb -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-left" data-aos-delay="400">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--warning);">5 Years</h3>
+                        <p class="text-secondary">Experience in {{ suburb | title }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4: Secure Repairs -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="card shadow-sm h-100 border-0">
+                    <div class="card-body">
+                        <h3 style="color: var(--danger);">100%</h3>
+                        <p class="text-secondary">Secure Repairs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Customer Testimonials -->
+  <section class="mb-5" style="background-color: var(--background);" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-down" data-aos-delay="100">What Our Customers Say</h2>
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                <blockquote class="blockquote p-4 rounded shadow-sm" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
+                    <p style="color: var(--text-secondary);">"Infinitech resolved my Wi-Fi issues within hours. My network has never been more stable!"</p>
+                    <div class="blockquote-footer" style="color: var(--primary-dark);">Emily R., {{ suburb | title }}</div>
+                </blockquote>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
+                <blockquote class="blockquote p-4 rounded shadow-sm" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
+                    <p style="color: var(--text-secondary);">"The technician optimized our office Wi-Fi, and the improvement is amazing. Highly recommend!"</p>
+                    <div class="blockquote-footer" style="color: var(--primary-dark);">James L., {{ suburb | title }}</div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- FAQ Section -->
+  <section class="py-5" style="background-color: var(--background);" data-aos="fade-up" data-aos-duration="1200">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-down" data-aos-duration="1200">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+                        How long does an Apple repair take?
+                    </button>
+                </h3>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="background-color: var(--text-on-primary); color: var(--text-secondary);">
+                        Most repairs are completed in a few hours. However, more complex issues may take 1-2 days.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+                        Do you offer a warranty for repairs?
+                    </button>
+                </h3>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="background-color: var(--text-on-primary); color: var(--text-secondary);">
+                        Yes, all repairs come with a warranty on parts and service for up to 12 months.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <!-- Call-to-Action -->
+  <section class="text-center py-5" style="background-color: var(--primary-light); color: var(--text-on-primary);" data-aos="fade-up" data-aos-duration="1200">
+      <div class="container">
+          <h2 class="mb-3 fw-bold" style="color: var(--text-on-primary);">Need Expert Apple Repairs in {{ suburb | title }}?</h2>
+          <p class="mb-4" style="color: var(--text-on-primary); font-size: 1.2rem;" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
+              Contact Infinitech today for fast, reliable, and affordable solutions tailored to your Apple device needs!
+          </p>
+          <a href="/contact" class="btn btn-lg px-5 py-3 shadow" style="background-color: var(--button-primary); color: var(--button-text); border-radius: 50px;" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
+              Request a Quote
+          </a>
+      </div>
+  </section>
+
+</div>
+{% endblock %}
+

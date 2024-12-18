@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - Infinitech{% endblock %}
+
+{% block meta %}
+<meta name="description" content="The page you're looking for can't be found. Infinitech is here to help you with your IT solutions.">
+<meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block content %}
+<section class="text-center py-5" style="background-color: var(--background);">
+    <div class="container">
+        <h1 class="display-3 fw-bold" style="color: var(--primary-dark);">404</h1>
+        <h2 class="mb-4" style="color: var(--primary-light);">Oops! Page Not Found</h2>
+        <p class="mb-4" style="color: var(--text-secondary);">
+            The page you're looking for doesn't exist, or an error has occurred. Let's get you back on track.
+        </p>
+        <a href="/" class="btn btn-lg" style="background-color: var(--button-primary); color: var(--button-text);">Go to Home</a>
+        <a href="/contact" class="btn btn-outline-primary ms-3" style="color: var(--primary-light); border-color: var(--primary-light);">
+            Contact Support
+        </a>
+        <div class="mt-5">
+            <img src="/static/images/404-error.webp" alt="Page Not Found" class="img-fluid" style="max-width: 400px;">
+        </div>
+    </div>
+</section>
+{% endblock %}

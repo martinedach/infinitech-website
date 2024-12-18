@@ -7,94 +7,111 @@
 <meta name="keywords" content="computer repair {{ suburb | lower }}, computer repair services {{ suburb | lower }}, hardware repair {{ suburb | lower }}, software repair {{ suburb | lower }}">
 <meta property="og:title" content="Computer Repair in {{ suburb | title }} - Infinitech">
 <meta property="og:description" content="Infinitech provides professional computer repair services in {{ suburb | title }}. Expert diagnostics, hardware repairs, and software solutions tailored for New Zealand.">
-<meta property="og:url" content="https://www.infinitech.com/computer-repair/{{ suburb | lower }}">
+<meta property="og:url" content="https://infinitech.com/computer-repair/{{ suburb | lower }}">
 <meta property="og:type" content="website">
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Computer Repair",
-  "areaServed": "{{ suburb | title }}, New Zealand",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Infinitech",
-    "url": "https://www.infinitech.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "{{ suburb | title }}",
-      "addressCountry": "NZ"
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Computer Repair Services",
+      "description": "Infinitech offers professional computer repair services to ensure your devices are running smoothly and efficiently.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Infinitech",
+        "image": "https://infinitech.com/static/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "72a Onslow Avenue",
+          "addressLocality": "Epsom",
+          "addressRegion": "Auckland",
+          "postalCode": "1023",
+          "addressCountry": "NZ"
+        },
+        "telephone": "+64-272849916",
+        "url": "https://infinitech.com",
+        "openingHours": "Mo-Fr 09:00-18:00"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "{{ suburb | title }}, New Zealand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://infinitech.com/services/computer-repair"
+      }
     }
-  }
-}
-</script>
+    </script>
+    
+        
 {% endblock %}
 
 {% block content %}
 <div class="container py-5">
 
   <!-- Hero Section -->
-<div class="hero" style="background-color: var(--background);">
+  <div class="hero" style="background-color: var(--background);" data-aos="fade-up">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-6 text-center text-md-start">
+            <div class="col-12 col-md-6 text-center text-md-start" data-aos="fade-right">
                 <h1 class="display-3 fw-bold" style="color: var(--primary-dark);">Expert Computer Repair in {{ suburb | title }}</h1>
                 <p class="lead mt-4" style="color: var(--text-secondary);">
                     Infinitech offers reliable computer repair services in {{ suburb | title }}. From hardware diagnostics to performance optimization, we ensure your computer runs at its best. Trust us for professional and affordable solutions tailored to your needs.
                 </p>
                 <a href="/services" class="btn btn-lg" style="background-color: var(--button-primary); color: var(--button-text);">Discover Our Services</a>
             </div>
-            <div class="col-12 col-md-6 text-center">
-                <img src="/static/images/computer-repair-nz.svg" alt="Computer Repair in {{ suburb | title }}" class="img-fluid rounded shadow">
+            <div class="col-12 col-md-6 text-center" data-aos="fade-left">
+                <img src="/static/images/computer-repair-nz.webp" alt="Computer Repair in {{ suburb | title }}" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
 </div>
 
     <!-- Why Choose Us Section -->
-<section class="py-5" style="background-color: var(--background);">
-    <div class="container">
-        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Why Choose Infinitech?</h2>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="card shadow h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-speedometer2 fs-1" style="color: var(--primary-light);"></i>
-                        <h5 class="card-title mt-3" style="color: var(--primary-dark);">Fast Service</h5>
-                        <p class="card-text" style="color: var(--text-secondary);">Quick turnaround times to get your computer up and running.</p>
+    <section class="py-5" style="background-color: var(--background);" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: var(--primary-dark);">Why Choose Infinitech?</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-speedometer2 fs-1" style="color: var(--primary-light);"></i>
+                            <h5 class="card-title mt-3" style="color: var(--primary-dark);">Fast Service</h5>
+                            <p class="card-text" style="color: var(--text-secondary);">Quick turnaround times to get your computer up and running.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card shadow h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-gear-wide-connected fs-1" style="color: var(--icon-color);"></i>
-                        <h5 class="card-title mt-3" style="color: var(--primary-dark);">Expert Technicians</h5>
-                        <p class="card-text" style="color: var(--text-secondary);">Highly skilled professionals with years of experience.</p>
+                <div class="col-md-3 mb-4" data-aos="fade-right" data-aos-delay="200">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-gear-wide-connected fs-1" style="color: var(--icon-color);"></i>
+                            <h5 class="card-title mt-3" style="color: var(--primary-dark);">Expert Technicians</h5>
+                            <p class="card-text" style="color: var(--text-secondary);">Highly skilled professionals with years of experience.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card shadow h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-wallet2 fs-1" style="color: var(--icon-color);"></i>
-                        <h5 class="card-title mt-3" style="color: var(--primary-dark);">Affordable Prices</h5>
-                        <p class="card-text" style="color: var(--text-secondary);">Transparent pricing with no hidden fees.</p>
+                <div class="col-md-3 mb-4" data-aos="fade-right" data-aos-delay="300">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-wallet2 fs-1" style="color: var(--icon-color);"></i>
+                            <h5 class="card-title mt-3" style="color: var(--primary-dark);">Affordable Prices</h5>
+                            <p class="card-text" style="color: var(--text-secondary);">Transparent pricing with no hidden fees.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card shadow h-100">
-                    <div class="card-body text-center">
-                        <i class="bi bi-shield-lock fs-1" style="color: var(--icon-color);"></i>
-                        <h5 class="card-title mt-3" style="color: var(--primary-dark);">Secure Repairs</h5>
-                        <p class="card-text" style="color: var(--text-secondary);">We prioritize data security and system integrity.</p>
+                <div class="col-md-3 mb-4" data-aos="fade-left" data-aos-delay="400">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-shield-lock fs-1" style="color: var(--icon-color);"></i>
+                            <h5 class="card-title mt-3" style="color: var(--primary-dark);">Secure Repairs</h5>
+                            <p class="card-text" style="color: var(--text-secondary);">We prioritize data security and system integrity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
 
    <!-- Service Process -->
 <section class="py-5" style="background-color: var(--background);">
@@ -102,7 +119,7 @@
         <h2 class="text-center mb-4" style="color: var(--primary-dark);">Our Repair Process</h2>
         <div class="row">
             <!-- Step 1: Consultation -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-clipboard-check fs-1" style="color: var(--primary-light);"></i>
@@ -112,7 +129,7 @@
                 </div>
             </div>
             <!-- Step 2: Diagnostics -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-search fs-1" style="color: var(--icon-color);"></i>
@@ -122,7 +139,7 @@
                 </div>
             </div>
             <!-- Step 3: Repair -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-tools fs-1" style="color: var(--icon-color);"></i>
@@ -132,7 +149,7 @@
                 </div>
             </div>
             <!-- Step 4: Quality Check -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-star fs-1" style="color: var(--primary-light);"></i>
@@ -146,13 +163,14 @@
 </section>
 
 
-  <!-- Industries Served -->
+
+<!-- Industries Served -->
 <section class="py-5" style="background-color: var(--background);">
     <div class="container">
         <h2 class="text-center mb-4" style="color: var(--primary-dark);">Industries We Serve</h2>
         <div class="row">
             <!-- Small Businesses -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-briefcase fs-1" style="color: var(--primary-light);"></i>
@@ -162,7 +180,7 @@
                 </div>
             </div>
             <!-- Education -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-book fs-1" style="color: var(--icon-color);"></i>
@@ -172,7 +190,7 @@
                 </div>
             </div>
             <!-- Individuals -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-person fs-1" style="color: var(--primary-light);"></i>
@@ -185,13 +203,13 @@
     </div>
 </section>
 
-    <!-- Upgrade Benefits Section -->
+  <!-- Upgrade Benefits Section -->
 <section class="py-5" style="background-color: var(--background);">
     <div class="container">
         <h2 class="text-center mb-4" style="color: var(--primary-dark);">Enhance Your Computer’s Performance</h2>
         <div class="row">
             <!-- SSD Upgrade -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-lightning fs-1" style="color: var(--primary-light);"></i>
@@ -203,7 +221,7 @@
                 </div>
             </div>
             <!-- Battery Replacement -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-battery-charging fs-1" style="color: var(--icon-color);"></i>
@@ -215,7 +233,7 @@
                 </div>
             </div>
             <!-- RAM Upgrade -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card shadow h-100">
                     <div class="card-body text-center">
                         <i class="bi bi-memory fs-1" style="color: var(--warning);"></i>
@@ -232,11 +250,13 @@
 
 
    <!-- Statistics Section -->
+<!-- Our Proven Track Record -->
 <section class="py-5" style="background-color: var(--background);">
     <div class="container">
         <h2 class="text-center mb-4" style="color: var(--primary-dark);">Our Proven Track Record</h2>
         <div class="row">
-            <div class="col-md-3 text-center mb-3">
+            <!-- Card 1: Computers Repaired -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="card shadow-sm h-100 border-0">
                     <div class="card-body">
                         <h3 style="color: var(--primary-light);">10K+</h3>
@@ -244,7 +264,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 text-center mb-3">
+            <!-- Card 2: Customer Satisfaction -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="card shadow-sm h-100 border-0">
                     <div class="card-body">
                         <h3 style="color: var(--success);">98%</h3>
@@ -252,7 +273,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 text-center mb-3">
+            <!-- Card 3: Experience in Suburb -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="card shadow-sm h-100 border-0">
                     <div class="card-body">
                         <h3 style="color: var(--warning);">5 Years</h3>
@@ -260,7 +282,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 text-center mb-3">
+            <!-- Card 4: Secure Repairs -->
+            <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="400">
                 <div class="card shadow-sm h-100 border-0">
                     <div class="card-body">
                         <h3 style="color: var(--danger);">100%</h3>
@@ -272,18 +295,22 @@
     </div>
 </section>
 
+
 <!-- Customer Testimonials -->
+<!-- What Our Customers Say -->
 <section class="mb-5" style="background-color: var(--background);">
     <div class="container">
-        <h2 class="text-center mb-4" style="color: var(--primary-dark);">What Our Customers Say</h2>
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-up">What Our Customers Say</h2>
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <!-- Customer Testimonial 1 -->
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <blockquote class="blockquote p-4 rounded shadow-sm" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
                     <p style="color: var(--text-secondary);">"Infinitech fixed my laptop in just one day. Fantastic service and friendly staff!"</p>
                     <div class="blockquote-footer mt-3" style="color: var(--primary-dark);">Sarah T., {{ suburb | title }}</div>
                 </blockquote>
             </div>
-            <div class="col-md-6 mb-4">
+            <!-- Customer Testimonial 2 -->
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <blockquote class="blockquote p-4 rounded shadow-sm" style="background-color: var(--text-on-primary); border-left: 5px solid var(--primary-light);">
                     <p style="color: var(--text-secondary);">"They saved all my files after a major hard drive crash. Highly recommend Infinitech!"</p>
                     <div class="blockquote-footer mt-3" style="color: var(--primary-dark);">James L., {{ suburb | title }}</div>
@@ -293,13 +320,15 @@
     </div>
 </section>
 
+
 <!-- FAQ Section -->
+<!-- Frequently Asked Questions -->
 <section class="mb-5" style="background-color: var(--background);">
     <div class="container">
-        <h2 class="text-center mb-4" style="color: var(--primary-dark);">Frequently Asked Questions</h2>
+        <h2 class="text-center mb-4" style="color: var(--primary-dark);" data-aos="fade-up">Frequently Asked Questions</h2>
         <div class="accordion" id="faqAccordion">
             <!-- FAQ Item 1 -->
-            <div class="accordion-item border-0 shadow-sm mb-3">
+            <div class="accordion-item border-0 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="accordion-header" id="faq1">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" style="background-color: var(--primary-light); color: var(--text-on-primary);">
                         How long does a computer repair take?
@@ -312,7 +341,7 @@
                 </div>
             </div>
             <!-- FAQ Item 2 -->
-            <div class="accordion-item border-0 shadow-sm mb-3">
+            <div class="accordion-item border-0 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="accordion-header" id="faq2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="background-color: var(--primary-light); color: var(--text-on-primary);">
                         Do you offer on-site computer repair services in {{ suburb | title }}?
@@ -325,7 +354,7 @@
                 </div>
             </div>
             <!-- FAQ Item 3 -->
-            <div class="accordion-item border-0 shadow-sm mb-3">
+            <div class="accordion-item border-0 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="300">
                 <h3 class="accordion-header" id="faq3">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="background-color: var(--primary-light); color: var(--text-on-primary);">
                         What types of computer problems do you fix?
@@ -338,7 +367,7 @@
                 </div>
             </div>
             <!-- FAQ Item 4 -->
-            <div class="accordion-item border-0 shadow-sm mb-3">
+            <div class="accordion-item border-0 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="accordion-header" id="faq4">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="background-color: var(--primary-light); color: var(--text-on-primary);">
                         Can you recover data from a damaged hard drive?
@@ -351,7 +380,7 @@
                 </div>
             </div>
             <!-- FAQ Item 5 -->
-            <div class="accordion-item border-0 shadow-sm mb-3">
+            <div class="accordion-item border-0 shadow-sm mb-3" data-aos="fade-up" data-aos-delay="500">
                 <h3 class="accordion-header" id="faq5">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" style="background-color: var(--primary-light); color: var(--text-on-primary);">
                         Is there a warranty on the repairs?
@@ -368,18 +397,20 @@
 </section>
 
 
+
 <!-- Call-to-Action -->
-<section class="text-center py-5" style="background-color: var(--primary-light); color: var(--text-on-primary);">
+<section class="text-center py-5" style="background-color: var(--primary-light); color: var(--text-on-primary);" data-aos="fade-up">
     <div class="container">
-        <h2 class="mb-3 fw-bold" style="color: var(--text-on-primary);">Need Expert Computer Repairs in {{ suburb | title }}?</h2>
-        <p class="mb-4" style="color: var(--text-on-primary); font-size: 1.2rem;">
+        <h2 class="mb-3 fw-bold" style="color: var(--text-on-primary);" data-aos="fade-up" data-aos-delay="100">Need Expert Computer Repairs in {{ suburb | title }}?</h2>
+        <p class="mb-4" style="color: var(--text-on-primary); font-size: 1.2rem;" data-aos="fade-up" data-aos-delay="200">
             Contact Infinitech today for fast, reliable, and affordable solutions tailored to your needs!
         </p>
-        <a href="/contact" class="btn btn-lg px-5 py-3 shadow" style="background-color: var(--button-primary); color: var(--button-text); border-radius: 50px;">
+        <a href="/contact" class="btn btn-lg px-5 py-3 shadow" style="background-color: var(--button-primary); color: var(--button-text); border-radius: 50px;" data-aos="fade-up" data-aos-delay="300">
             Request a Quote
         </a>
     </div>
 </section>
+
 
 </div>
 {% endblock %}
