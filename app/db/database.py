@@ -6,7 +6,6 @@ from passlib.hash import bcrypt
 from app.dependencies.utils import get_password_hash
 from app.db.base import Base
 
-
 # Database URL
 DATABASE_URL = "postgresql://user:password@db:5432/fastapi_db"
 
@@ -38,15 +37,31 @@ def create_tables_and_populate():
             print("Admin user created successfully.")
         else:
             print("Admin user already exists.")
+
+        # Populate the Suburb table
+        existing_suburbs = db.query(Suburb).first()  # Check if there is at least one record
+        if not existing_suburbs:
+            print("Populating suburbs table...")
+            for suburb_data in suburbs:
+                suburb = Suburb(
+                    name=suburb_data["name"],
+                    city=suburb_data["city"],
+                    region=suburb_data["region"],
+                    postcode=suburb_data["postcode"]
+                )
+                db.add(suburb)
+            db.commit()
+            print("Suburbs table populated successfully.")
+        else:
+            print("Suburbs table already populated.")
+    except Exception as e:
+        print(f"Error occurred: {e}")
     finally:
         db.close()
-        
-        
-        
+
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
-        
