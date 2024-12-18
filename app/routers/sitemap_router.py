@@ -41,7 +41,7 @@ async def sitemap():
     # Add service pages for each suburb
     for suburb in suburbs:
         for service in services:
-            url = f"{base_url}/{service}/{suburb}"
+            url = f"{base_url}/{service}/{suburb['name']}"
             xml += f"  <url>\n"
             xml += f"    <loc>{url}</loc>\n"
             xml += f"    <priority>0.8</priority>\n"
