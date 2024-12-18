@@ -1,5 +1,7 @@
-from fastapi import APIRouter, Response
-from app.data.suburb import suburbs
+from fastapi import APIRouter, Response, Depends
+from sqlalchemy.orm import Session
+from app.db.database import get_db
+from app.models.models import Suburb
 
 router = APIRouter()
 
@@ -16,8 +18,16 @@ static_pages = ["about", "contact", "services", "computer-repair", "about-us", "
 blog_posts = ["post1", "post2", "post4"]  # Replace with actual blog post slugs if applicable
 categories = ["computers", "laptops", "wifi"]
 
+
+
+# Helper function to fetch suburbs from the database
+def get_suburbs_from_db(db: Session):
+    return db.query(Suburb).all()
+
+
+
 @router.get("/sitemap.xml", response_class=Response)
-async def sitemap():
+async def sitemap(db: Session = Depends(get_db)):
     base_url = "https://infinitech.co.nz"
 
     # Generate XML sitemap
@@ -29,6 +39,10 @@ async def sitemap():
     xml += f"    <loc>{base_url}/</loc>\n"
     xml += f"    <priority>1.0</priority>\n"
     xml += f"  </url>\n"
+    
+    suburbs = get_suburbs_from_db(db)
+
+    
 
     # Add static pages
     for page in static_pages:
@@ -41,7 +55,7 @@ async def sitemap():
     # Add service pages for each suburb
     for suburb in suburbs:
         for service in services:
-            url = f"{base_url}/{service}/{suburb['name']}"
+            url = f"{base_url}/{service}/{suburb.name}"
             xml += f"  <url>\n"
             xml += f"    <loc>{url}</loc>\n"
             xml += f"    <priority>0.8</priority>\n"
