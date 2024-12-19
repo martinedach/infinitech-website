@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request, Depends
+from fastapi import APIRouter, Request, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
@@ -20,6 +20,13 @@ def get_suburbs_from_db(db: Session):
 @router.get("/computer-repair/{suburb}", response_class=HTMLResponse)
 async def computer_repair_suburb(request: Request, suburb: str, db: Session = Depends(get_db)):
     suburbs = get_suburbs_from_db(db)
+    
+     
+    # Check if the requested suburb is in the database
+    if not any(s.name == suburb for s in suburbs):
+        # Suburb not found, raise 404 error
+        raise HTTPException(status_code=404, detail="Suburb not found")
+    
     return templates.TemplateResponse(
         "computer_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
@@ -29,6 +36,14 @@ async def computer_repair_suburb(request: Request, suburb: str, db: Session = De
 @router.get("/laptop-repair/{suburb}", response_class=HTMLResponse)
 async def laptop_repair_suburb(request: Request, suburb: str, db: Session = Depends(get_db)):
     suburbs = get_suburbs_from_db(db)
+    
+    
+    # Check if the requested suburb is in the database
+    if not any(s.name == suburb for s in suburbs):
+        # Suburb not found, raise 404 error
+        raise HTTPException(status_code=404, detail="Suburb not found")
+    
+    
     return templates.TemplateResponse(
         "laptop_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
@@ -38,6 +53,13 @@ async def laptop_repair_suburb(request: Request, suburb: str, db: Session = Depe
 @router.get("/wifi-repair/{suburb}", response_class=HTMLResponse)
 async def wifi_repair_suburb(request: Request, suburb: str, db: Session = Depends(get_db)):
     suburbs = get_suburbs_from_db(db)
+    
+    # Check if the requested suburb is in the database
+    if not any(s.name == suburb for s in suburbs):
+        # Suburb not found, raise 404 error
+        raise HTTPException(status_code=404, detail="Suburb not found")
+    
+    
     return templates.TemplateResponse(
         "wifi_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
@@ -47,6 +69,13 @@ async def wifi_repair_suburb(request: Request, suburb: str, db: Session = Depend
 @router.get("/apple-repair/{suburb}", response_class=HTMLResponse)
 async def apple_repair_suburb(request: Request, suburb: str, db: Session = Depends(get_db)):
     suburbs = get_suburbs_from_db(db)
+    
+    # Check if the requested suburb is in the database
+    if not any(s.name == suburb for s in suburbs):
+        # Suburb not found, raise 404 error
+        raise HTTPException(status_code=404, detail="Suburb not found")
+    
+    
     return templates.TemplateResponse(
         "apple_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
@@ -56,6 +85,13 @@ async def apple_repair_suburb(request: Request, suburb: str, db: Session = Depen
 @router.get("/printer-repair/{suburb}", response_class=HTMLResponse)
 async def printer_repair_suburb(request: Request, suburb: str, db: Session = Depends(get_db)):
     suburbs = get_suburbs_from_db(db)
+    
+    # Check if the requested suburb is in the database
+    if not any(s.name == suburb for s in suburbs):
+        # Suburb not found, raise 404 error
+        raise HTTPException(status_code=404, detail="Suburb not found")
+    
+    
     return templates.TemplateResponse(
         "printer_repair.html",
         {"request": request, "suburb": suburb, "suburbs": suburbs}
