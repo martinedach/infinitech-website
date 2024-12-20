@@ -14,6 +14,7 @@ from app.routers.quotes import router as quotes_router
 from app.routers.services_router import router as services_router
 from app.routers.sitemap_router import router as sitemap_router
 from app.routers.admin_router import router as admin_router
+from app.routers.blog_router import router as blog_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -34,6 +35,7 @@ app.include_router(quotes_router)
 app.include_router(services_router)
 app.include_router(sitemap_router)
 app.include_router(admin_router)
+app.include_router(blog_router)
 
 
 
